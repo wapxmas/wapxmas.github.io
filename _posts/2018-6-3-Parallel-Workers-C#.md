@@ -10,8 +10,7 @@ Before that day I had used to approach parallel tasks via regular .Net Framework
 Here I was given the list of proxies, and the prospective application had to get one proxy from the list, do some web work through it, and return back to that list. The essential condition on the application was working in a multithreaded way. That meant if the application was provided with a list of 3 proxies, it should be able to handle it in the aforementioned way even though the application was configured to work on such a number of threads that could be bigger than the list of proxies.
 So, later on I came up with the [ParallelCircleQueue&lt;T&gt;](https://github.com/wapxmas/RikardLib.Concurrent/blob/master/ParallelCircleQueue.cs) class that can address that type of task. The following this is example of usage of this class.
 
-
-```cs
+{% highlight cs linenos %}
 class Program
 {
     static void Main(string[] args)
@@ -39,8 +38,7 @@ class Program
         }
     }
 }
-```
-
+{% endhighlight %}
 
 ### Second task
 
