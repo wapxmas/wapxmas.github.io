@@ -44,7 +44,7 @@ class Program
 
 I bet you can remember that when you are working with resources they mostly deny work with them in a multithreaded way. It is appropriate for resources to work with them in single thread. Then, what if you have to deal with resource in multithreaded way. Consequently, the following class - [ParallelGatherSingle&lt;T&gt;](https://github.com/wapxmas/RikardLib.Concurrent/blob/master/ParallelGatherSingle.cs)  - was written to cope with this issue. Here is example of the usage.
 
-```cs
+{% highlight cs linenos %}
         static void Main(string[] args)
         {
             var pgs = new ParallelGatherSingle<string>(ExampleGatherItems);
@@ -81,13 +81,13 @@ I bet you can remember that when you are working with resources they mostly deny
             }
         }
     }
-```
+{% endhighlight %}
 
 ### Third task
 
 Another task I was given was to make application that could process literally millions of tasks in a multithreaded way so that application could consume that vast amount of work in a piece-by-piece way i.e. if there were million tasks, the application should be able to consume let’s say 10’000 tasks, and then by raising event of finishing could get another 10’000 tasks to process. That task also was beyond the boundaries of means provided by .Net Framework. Thus, [ParallelWorker](https://github.com/wapxmas/RikardLib.Concurrent/blob/master/ParallelWorker.cs) was born, and the following is the example of the usage.
 
-```cs
+{% highlight cs linenos %}
     class Program
     {
         static void Main(string[] args)
@@ -121,4 +121,4 @@ Another task I was given was to make application that could process literally mi
             Thread.Sleep(3000);
         }
     }
-```
+{% endhighlight %}
