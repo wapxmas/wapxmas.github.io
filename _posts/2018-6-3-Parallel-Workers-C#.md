@@ -11,33 +11,33 @@ Here I was given the list of proxies, and the prospective application had to get
 So, later on I came up with the [ParallelCircleQueue&lt;T&gt;](https://github.com/wapxmas/RikardLib.Concurrent/blob/master/ParallelCircleQueue.cs) class that can address that type of task. The following this is example of usage of this class.
 
 ```cs
-    class Program
+class Program
+{
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        var pcq = new ParallelCircleQueue<string>(new string[] { "s1", "s2", "s3" }.ToList());
+
+        var tasks = new[]
         {
-            var pcq = new ParallelCircleQueue<string>(new string[] { "s1", "s2", "s3" }.ToList());
+            Task.Factory.StartNew(() => ExampleTask(pcq)),
+            Task.Factory.StartNew(() => ExampleTask(pcq)),
+            Task.Factory.StartNew(() => ExampleTask(pcq))
+        };
 
-            var tasks = new[]
-            {
-                Task.Factory.StartNew(() => ExampleTask(pcq)),
-                Task.Factory.StartNew(() => ExampleTask(pcq)),
-                Task.Factory.StartNew(() => ExampleTask(pcq))
-            };
+        Task.WaitAll(tasks);
+    }
 
-            Task.WaitAll(tasks);
-        }
-
-        static void ExampleTask<T>(ParallelCircleQueue<T> pcq)
+    static void ExampleTask<T>(ParallelCircleQueue<T> pcq)
+    {
+        foreach(var _ in Enumerable.Range(1, 100))
         {
-            foreach(var _ in Enumerable.Range(1, 100))
+            using (var p = pcq.GetItem())
             {
-                using (var p = pcq.GetItem())
-                {
-                    Console.WriteLine(p.Item);
-                }
+                Console.WriteLine(p.Item);
             }
         }
     }
+}
 ```
 
 ### Second task
