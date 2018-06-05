@@ -17,7 +17,7 @@ Let’s look at the declaration of the method that uses tuples.
 (string, string, string) LookupName(long id)
 {% endhighlight %}
 
-What we see above is the method returns a tuple value. Actually, .Net Framework has already got `System.Tuple` class from 4.0 version onwards. The following is rewritten version of the method using `System.Tuple` class.
+What we see above is the method returns a tuple value. Actually, .Net Framework has already got `System.Tuple` class from 4.0 version onwards. The following is modified version of the method using `System.Tuple` class.
 
 {% highlight cs %}
 System.Tuple<string, string, string> LookupName(long id)
