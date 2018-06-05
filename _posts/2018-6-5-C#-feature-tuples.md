@@ -23,7 +23,9 @@ What we see above is the method returns a tuple value. Actually, .Net Framework 
 System.Tuple<string, string, string> LookupName(long id)
 {% endhighlight %}
 
-Does the above return type look more verbose than the previous one or seem consuming any notable efforts of a developer to write it down than the first using tuples instead? I certainly will answer “no”. But, in that case, what kind of convenience do we get using tuples in C# 7.0? The convenience will become obvious when the new feature of C# 7.0 that is called Decomposition comes into play. Take a look at the following example.
+Does the above return type look more verbose than the previous one or seem consuming any notable efforts of a developer to write it down than the first using tuples instead? I certainly will answer “no”. But, in that case, what kind of convenience do we get using tuples in C# 7.0? The convenience will become obvious when the new feature of C# 7.0 that is called Decomposition comes into play.
+
+Take a look at the following example.
 
 {% highlight cs %}
 var (first, _, last) = LookupName(id1);
