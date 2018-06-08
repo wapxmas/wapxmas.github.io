@@ -3,7 +3,9 @@ layout: post
 title: C# Pattern Matching
 ---
 
-An increased interest in aspects of functional programming has emerged in recent years, and it seems that the team developed C# 7.0 has been no exception all that period, according to [new features of C#](https://blogs.msdn.microsoft.com/dotnet/2017/03/09/new-features-in-c-7-0/). From C# 7.0 onwards it has got ability to accomplish so-called ‘Pattern Matching’. I think it would not be any use to go any deep into historical reasons and backgrounds of Pattern Matching development. In my opinion (it draws on a few years of developing via Haskell), Pattern Matching just facilitates the way of programming conditionals i.e. instead of writing branches of “if” statements, you write only one line that does the same but just under the hood of programming language. How about beginning with example in Haskell, just because Pattern Matching of this language has greatly matured.
+An increased interest in aspects of functional programming has emerged in recent years, and it seems that the team developed C# 7.0 has been no exception all that period, according to [new features of C#](https://blogs.msdn.microsoft.com/dotnet/2017/03/09/new-features-in-c-7-0/).
+
+From C# 7.0 onwards it has got ability to accomplish so-called ‘Pattern Matching’. I think it would not be any use to go any deep into historical reasons and backgrounds of Pattern Matching development. In my opinion (it draws on a few years of developing via Haskell), Pattern Matching just facilitates the way of programming conditionals i.e. instead of writing branches of “if” statements, you write only one line that does the same but just under the hood of programming language. How about beginning with example in Haskell, just because Pattern Matching of this language has greatly matured.
 
 {% highlight haskell %}
 data Animal = Cat String | Dog String | Another String Integer
