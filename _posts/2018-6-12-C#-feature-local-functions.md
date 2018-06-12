@@ -3,7 +3,7 @@ layout: post
 title: Local Functions In C# 7.0
 ---
 
-As a result of the emerging interest in the functional programming, local functions have got a deserving emphasis and were implemented in C# 7.0 among other features. Local functions as such are widely being used in Haskell, so that it hard to conceive of this programming language with the absence of them.
+The value of an implementation of functional programming features in object-oriented programming languages has significantly grown last years; consequently, local functions have got a deserving emphasis and were implemented in C# 7.0 among other features. Local functions as such are widely being used in Haskell, so that it hard to conceive of this programming language with the absence of them.
 
 You can consider a usefulness of local functions by the following example:
 
