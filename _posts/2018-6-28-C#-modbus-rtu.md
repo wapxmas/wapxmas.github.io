@@ -21,5 +21,5 @@ Thread.Sleep(2);
 WinApi.TimeEndPeriod(1);
 {% endhighlight %}
 
-Also, you can check the timer resolution of your environment via [ClockRes](https://docs.microsoft.com/en-us/sysinternals/downloads/clockres).
+Also, you can check the settings of your environment timer resolution via [ClockRes](https://docs.microsoft.com/en-us/sysinternals/downloads/clockres).
 
