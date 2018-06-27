@@ -13,7 +13,7 @@ The following is the scheme of the aforementioned matter from the [specification
 
 The scheme suggests that you have to make a delay between messages at least 3,5 characters. The one character is composed of 11 bits. The only one thing you should do before a pause is to measure its length in milliseconds. You can use the following formula: (11 * 3,5) / (baud_rate * 1000) = amount of milliseconds. Also, according to the specification, if the baud rate is equal or bigger than 19200 Bps, a delay between messages should always be 1.750ms.
 
-Subject matter may (or may not) occur when an application tries to perform a delay less than 10ms (3 or 5ms for example) it transpires that, in spite of this, a delay may last 10ms. If this is your issue and you must not reduce a rate of messages, you should leverage the following Windows API: TimeBeginPeriod and TimeEndPeriod in the following manner:
+Subject matter may (or may not) occur when an application tries to perform a delay less than 10ms (3 or 5ms for example) it transpires that, in spite of this, a delay may still remain the same 10ms. If this is your issue and you must not reduce a rate of messages, you should leverage the following Windows API: TimeBeginPeriod and TimeEndPeriod in the following manner:
 
 {% highlight cs %}
 WinApi.TimeBeginPeriod(1);
