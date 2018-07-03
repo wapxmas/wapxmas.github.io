@@ -12,6 +12,7 @@ I believe this will lead to renewed interest in searching ways of database speed
 Moreover, I have made the Docker image that contains PostgreSQL 11 Beta 2 that is with JIT in order to facilitate a try of this new feature:
 
 `docker run --rm -p 5432:5432 --name postgresql wapxmas/postgresql-jit:11beta2`
+
 `pg user/password: docker/docker`
 
 [Here Dockerfile](https://github.com/wapxmas/DockerImages/blob/master/PostgreSQL-JIT/Dockerfile), so that you can build an image by yourself.
