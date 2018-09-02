@@ -49,7 +49,7 @@ That is the problem. “Ok, but why should I bother about injectivity?” you ma
 
 The following are cases of using the type families that can be found to be a problem if type families are not injective.
 
-##First case
+## First case
 
 Let us add the following function to our source:
 
@@ -110,7 +110,7 @@ So, the following:
 
 would return Bool, but it does not matter, because what GHC wanted is only to infer ‘a’ from ‘Foo a’.
 
-##Second case
+## Second case
 
 Let us add to the source the following:
 
