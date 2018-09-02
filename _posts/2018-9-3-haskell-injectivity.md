@@ -31,7 +31,7 @@ Now, not only did GHC say that Foo knew nothing about a type that was passed to,
 
 According to [Chapter 4.2.4 “Matchability”]( http://www.cis.upenn.edu/~sweirich/papers/eisenberg-thesis.pdf) of the great and famous dissertation “DEPENDENT TYPES IN HASKELL: THEORY AND PRACTICE” by Richard A. Eisenberg et al., it means the following:
 
-Definition (Injectivity). If f is injective, then f a ∼ f b implies a ∼ b.
+> Definition (Injectivity). If f is injective, then f a ∼ f b implies a ∼ b.
 
 In our case, it should be as “Foo a ∼ Foo b.” At first glance, we should not encounter any problems with that. Let us try:
 
