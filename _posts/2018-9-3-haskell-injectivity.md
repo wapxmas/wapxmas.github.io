@@ -128,3 +128,4 @@ If it were not for injective type families, there could be any other definition 
 
 As you can see, Type Families is the powerful tool for type-level programming, but there are some circumstances that one should take into account all the time.
 
+[Here is the repository with the code.](https://wapxmas.github.io/haskell-injectivity/)
