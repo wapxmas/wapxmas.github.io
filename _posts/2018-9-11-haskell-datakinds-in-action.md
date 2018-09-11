@@ -36,7 +36,7 @@ newtype LotsDir (t :: AdvertTypes) =
 
 someFunc :: IO ()
 someFunc =
-  startOutDownloading lotsUrlLand lotsFileLand lotsUrlPremises
+  startOutDownloading lotsUrlLand lotsFileLand lotsDirLand
 
 startOutDownloading :: LotsUrl t -> LotsFile t -> LotsDir t -> IO ()
 startOutDownloading (LotsUrl url) (LotsFile file) (LotsDir dir) = do
