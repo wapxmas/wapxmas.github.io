@@ -3,7 +3,7 @@ layout: post
 title: Haskell DataKinds In Action
 ---
 
-It is said that an example is worth a thousand words. Having that in mind, I want to show you what for [DataKinds extension](https://downloads.haskell.org/~ghc/7.8.4/docs/html/users_guide/promotion.html) is useful concerning one real issue.
+It is said that an example is worth a thousand words. Having that in mind, I want to show you what [DataKinds extension](https://downloads.haskell.org/~ghc/7.8.4/docs/html/users_guide/promotion.html) is useful for concerning one real issue.
 
 Supposing you have three variables that are assigned to some URL, file, and directory, and we want them to be passed to a function providing that it can ensure that URL, file, directory are from the same article.
 
