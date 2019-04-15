@@ -57,7 +57,7 @@ int main(int argc, char **argv)
 }
 {% endhighlight %}
 
-Execve enables us to give it anything we want, and then it passes this to the sys_execve linux kernel system call (https://elixir.bootlin.com/linux/v2.6.35/source/arch/alpha/kernel/entry.S#L925 http://man7.org/linux/man-pages/man2/execve.2.html). By doing that, we could see what happens if we pass the aforementioned C source code of Example #1 to it.
+Execve enables us to give it anything we want, and then it passes this to the sys_execve linux kernel system call (<https://elixir.bootlin.com/linux/v2.6.35/source/arch/alpha/kernel/entry.S#L925>, <http://man7.org/linux/man-pages/man2/execve.2.html>). By doing that, we could see what happens if we pass the aforementioned C source code of Example #1 to it.
 I did it, and the following was an output:
 
 {% highlight console %}
