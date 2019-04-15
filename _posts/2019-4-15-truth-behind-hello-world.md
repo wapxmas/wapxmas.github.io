@@ -3,7 +3,9 @@ layout: post
 title: The truth lying behind a ‘Hello World!’ executable
 ---
 
-Whenever we are learning how to program in a compiled programming language, reading a book, we are told by it to try making an ordinary program that does nothing but prints into console a ‘Hello World!’ message. After we have made, compiled, and run it, the book boastfully says that we now have made the program. What?! Is it supposed to mean that I have become a programmer as long as I have made the program? Since only programmers can make programs, but meanwhile, running a ‘hello world!’ for the 100th time, you realize that this is only beginning of the book and you have not read even a half, and the question arises, ‘Should I continue reading the book, or maybe am I done, ready for making programs?’
+Whenever we are learning how to program in a compiled programming language, reading a book, we are told by it to try making an ordinary program that does nothing but prints into console a ‘Hello World!’ message. After we have made, compiled, and run it, the book boastfully says that we now have made the program.
+
+What?! Is it supposed to mean that I have become a programmer as long as I have made the program? Since only programmers can make programs, but meanwhile, running a ‘hello world!’ for the 100th time, you realize that this is only beginning of the book and you have not read even a half, and the question arises, ‘Should I continue reading the book, or maybe am I done, ready for making programs?’
 
 The vast majority of the ‘Hello World!’ programs exemplify nothing. Whereas for a scripting language such an example might be convenient, it is inconvenient at all  for a compiled language, because a system developer should know not only a language structure, its operators, etc., but also one should be familiar with linking and loading processes happening under the hood, to see, for example, what exactly a ‘main’ function means, what exactly it is, why this name ‘main’ might not be changed, and why it even must be.
 
