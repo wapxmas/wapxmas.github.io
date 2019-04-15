@@ -4,7 +4,9 @@ title: The truth lying behind a ‘Hello World!’ executable
 ---
 
 Whenever we are learning how to program in a compiled programming language, reading a book, we are told by it to try making an ordinary program that does nothing but prints into console a ‘Hello World!’ message. After we have made, compiled, and run it, the book boastfully says that we now have made the program. What?! Is it supposed to mean that I have become a programmer as long as I have made the program? Since only programmers can make programs, but meanwhile, running a ‘hello world!’ for the 100th time, you realize that this is only beginning of the book and you have not read even a half, and the question arises, ‘Should I continue reading the book, or maybe am I done, ready for making programs?’
+
 The vast majority of the ‘Hello World!’ programs exemplify nothing. Whereas for a scripting language such an example might be convenient, it is inconvenient at all  for a compiled language, because a system developer should know not only a language structure, its operators, etc., but also one should be familiar with linking and loading processes happening under the hood, to see, for example, what exactly a ‘main’ function means, what exactly it is, why this name ‘main’ might not be changed, and why it even must be.
+
 Let us consider the following ‘Hello World!’ program written in C programming language (Example #1):
 
 {% highlight c %}
@@ -19,10 +21,16 @@ int main(int argc, char** argv)
 {% endhighlight %}
 
 This example shows us how to print the string to a terminal. But why should we choose C or C++, or even what have these languages ever been made for, since Assembler have allowed us to do the same operations on data long before the invention of C or C++? What for we should be grateful to those high-level languages?
+
 Let us continue. Should the aforementioned source code (Example #1) be thrown directly into a processor? Can a processor execute this code as is? We ourselves can try to check it.
+
 I copied the source code of Example #1 into hw.sh, added executable permission via chmod a+x hw.sh, and run it through terminal directly typing ./hw.sh [+Enter]. The following I got as the result:
+
+```console
 ./hw.sh: line 3: syntax error near unexpected token `('
 ./hw.sh: line 3: `int main(int argc, char** argv)'
+```
+
 Hmm, this looks that a shell treated hw.sh as though it were a shell script file. But we want this file to be pushed directly to the processor! To do so, we need a new program that can get anything given and arrange execution of no matter what in its hands.
 This can be done by the following program called ‘execve’:
 
