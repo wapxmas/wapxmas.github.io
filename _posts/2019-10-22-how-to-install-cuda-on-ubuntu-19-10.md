@@ -14,7 +14,7 @@ Meet the card :)
 
 1. Get the latest Ubuntu installed via [https://ubuntu.com/download](https://ubuntu.com/download)
 
-1. Afterwards, it would be helpful for one to navigate through directories in a terminal, if you had Midnight Commander installed. You can do it by the following command:
+2. Afterwards, it would be helpful for one to navigate through directories in a terminal, if you had Midnight Commander installed. You can do it by the following command:
 
 {% highlight console %}
 
