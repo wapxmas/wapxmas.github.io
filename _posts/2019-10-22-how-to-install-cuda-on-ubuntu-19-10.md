@@ -12,9 +12,9 @@ Meet the card :)
 ### Installation
 
 
-1. Get the latest Ubuntu installed via [https://ubuntu.com/download](https://ubuntu.com/download)
+- Get the latest Ubuntu installed via [https://ubuntu.com/download](https://ubuntu.com/download)
 
-2. Afterwards, it would be helpful for one to navigate through directories in a terminal, if you had Midnight Commander installed. You can do it by the following command:
+- Afterwards, it would be helpful for one to navigate through directories in a terminal, if you had Midnight Commander installed. You can do it by the following command:
 
 {% highlight console %}
 
@@ -24,37 +24,37 @@ sudo apt-get install mc
 
 Now it is time to find out a compute capability of the card.
 
-3. As per the section CUDA-Enabled Tesla Products of the https://developer.nvidia.com/cuda-gpus, a compute capability can be found, and it equals to 2.0 for the Tesla C2075 card.
+- As per the section CUDA-Enabled Tesla Products of the https://developer.nvidia.com/cuda-gpus, a compute capability can be found, and it equals to 2.0 for the Tesla C2075 card.
 
-4. Given the 2.0 compute capability, it can be found from the https://github.com/NVIDIA/nvidia-docker/wiki/CUDA (also the https://en.wikipedia.org/wiki/Nvidia_Tesla) that the most CUDA version can be as high as 8.0, because next successive versions of CUDA use different GPU architectures (Kepler and so on).
+- Given the 2.0 compute capability, it can be found from the https://github.com/NVIDIA/nvidia-docker/wiki/CUDA (also the https://en.wikipedia.org/wiki/Nvidia_Tesla) that the most CUDA version can be as high as 8.0, because next successive versions of CUDA use different GPU architectures (Kepler and so on).
 
-5. Check NVIDIA drivers have been installed:
+- Check NVIDIA drivers have been installed:
    
-6. Open Software Updater
+- Open Software Updater
 	
 ![Software Updater](/images/Tesla-C2075-2.png "Software Updater")
 
-7. Click on “Settings..”
+- Click on “Settings..”
 
-7. Clicking on “Additional Drivers” tab you should see something like this:
+- Clicking on “Additional Drivers” tab you should see something like this:
 
 ![Additional Drivers](/images/Tesla-C2075-3.png "Additional Drivers")
 
 It says that the card has been found and NVIDIA drivers are properly installed.
 
-8. Go to https://developer.nvidia.com/cuda-toolkit-archive
+- Go to https://developer.nvidia.com/cuda-toolkit-archive
 
-8. Given that the card driver needs the 8.0 version of CUDA Toolkit, click on “CUDA Toolkit 8.0 GA2”, choose Linux, then x86_64, then Ubuntu, then 16.04 (don’t mind it for now), and choose run file (local).
+- Given that the card driver needs the 8.0 version of CUDA Toolkit, click on “CUDA Toolkit 8.0 GA2”, choose Linux, then x86_64, then Ubuntu, then 16.04 (don’t mind it for now), and choose run file (local).
 
 ![CUDA Toolkit](/images/Tesla-C2075-4.png "CUDA Toolkit")
 
-9. Download the “Base Installer” and “Patch 2 (Released Jun 26, 2017)”
+- Download the “Base Installer” and “Patch 2 (Released Jun 26, 2017)”
 
-9. Install CUDA dependencies:
+- Install CUDA dependencies:
 
 sudo apt-get install freeglut3 freeglut3-dev libxi-dev libxmu-dev
 
-11. Run these commands:
+- Run these commands:
 
 {% highlight console %}
 
@@ -66,7 +66,7 @@ rm -rf ./run_files ./uninstall_cuda.pl ./cuda-installer.pl ./InstallUtils.pm
 
 {% endhighlight %}
 
-12. Run “Base installer” using the following command (the flag ‘—override’ makes the CUDA installer bypass a compiler version check):
+- Run “Base installer” using the following command (the flag ‘—override’ makes the CUDA installer bypass a compiler version check):
 
 {% highlight console %}
 
@@ -74,7 +74,7 @@ sudo sh cuda_8.0.61_375.26_linux.run --override
 
 {% endhighlight %}
 
-13. You will be prompted for accepting or declining license:
+- You will be prompted for accepting or declining license:
 
 {% highlight console %}
 
@@ -83,7 +83,7 @@ accept/decline/quit: accept
 
 {% endhighlight %}
 
-14. As well as you will be warned about an unsupported configuration:
+- As well as you will be warned about an unsupported configuration:
 
 {% highlight console %}
 
@@ -92,7 +92,7 @@ You are attempting to install on an unsupported configuration. Do you wish to co
 
 {% endhighlight %}
 
-15. Then, you will have to decline the following offer (because you already have drivers installed, and not to say they are more recent): 
+- Then, you will have to decline the following offer (because you already have drivers installed, and not to say they are more recent): 
 
 {% highlight console %}
 
@@ -101,7 +101,7 @@ Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 375.26?
 
 {% endhighlight %}
 
-16. And the last answers:
+- And the last answers:
 
 {% highlight console %}
 
@@ -122,9 +122,9 @@ Enter CUDA Samples Location
 
 {% endhighlight %}
 
-17. After some time installation should be done.
+- After some time installation should be done.
 
-18. Run the “Patch 2 (Released Jun 26, 2017)”:
+- Run the “Patch 2 (Released Jun 26, 2017)”:
 
 {% highlight console %}
 
@@ -132,8 +132,7 @@ sudo sh cuda_8.0.61.2_linux.run
 
 {% endhighlight %}
 
-
-19. In order to install gcc version 5, do the following:
+- In order to install gcc version 5, do the following:
 
 {% highlight console %}
 
@@ -147,7 +146,7 @@ sudo apt-get update
 
 {% endhighlight %}
 
-20. Install gcc and g++ version 5:
+- Install gcc and g++ version 5:
 
 {% highlight console %}
 
@@ -155,9 +154,9 @@ sudo apt-get install gcc-5 g++-5
 
 {% endhighlight %}
 
-21. Remove the last line from /etc/apt/sources.list and run updating packages again.
+- Remove the last line from /etc/apt/sources.list and run updating packages again.
 
-22. Make symbolic links to the compilers installed:
+- Make symbolic links to the compilers installed:
 
 {% highlight console %}
 
@@ -166,9 +165,9 @@ sudo ln -s /usr/bin/gcc-5 /usr/local/cuda/bin/gcc
 
 {% endhighlight %}
 
-23. Run the ‘make’ make command inside the CUDA samples directory.
+- Run the ‘make’ make command inside the CUDA samples directory.
 
-24. After the samples have got built, you may run (in the current directory) the following command, to get information about a NVIDIA Tesla card:
+- After the samples have got built, you may run (in the current directory) the following command, to get information about a NVIDIA Tesla card:
 
 {% highlight console %}
 
