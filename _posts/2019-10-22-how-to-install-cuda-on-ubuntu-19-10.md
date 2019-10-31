@@ -161,7 +161,7 @@ sudo apt-get install gcc-5 g++-5
 {% highlight console %}
 
 sudo ln -s /usr/bin/gcc-5 /usr/local/cuda/bin/gcc
-sudo ln -s /usr/bin/gcc-5 /usr/local/cuda/bin/gcc
+sudo ln -s /usr/bin/g++-5 /usr/local/cuda/bin/g++
 
 {% endhighlight %}
 
