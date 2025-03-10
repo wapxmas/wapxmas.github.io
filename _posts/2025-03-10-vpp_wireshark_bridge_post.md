@@ -13,7 +13,7 @@ image: /images/wireshark_capture.png
    <img src="/images/wireshark_capture.png" alt="Захват трафика VPP в Wireshark" style="max-width: 700px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </div>
 
-**VPP to Wireshark Bridge** — это инновационный инструмент, связывающий VPP (Vector Packet Processing) и Wireshark. Он позволяет анализировать трафик с интерфейсов VPP в Wireshark в реальном времени, даже если они установлены на разных машинах.
+**[VPP to Wireshark Bridge](https://github.com/wapxmas/vpp_wireshark_bridge)** — это инновационный инструмент, связывающий VPP (Vector Packet Processing) и Wireshark. Он позволяет анализировать трафик с интерфейсов VPP в Wireshark в реальном времени, даже если они установлены на разных машинах.
 
 Если вы работаете с высокопроизводительными сетевыми решениями на базе VPP, вы знаете, как важно иметь возможность видеть, что происходит на уровне пакетов. Теперь вы можете использовать всю мощь Wireshark для анализа трафика VPP — без сложных настроек tcpdump или виртуальных интерфейсов.
 
