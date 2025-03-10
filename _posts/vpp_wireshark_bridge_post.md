@@ -6,13 +6,13 @@ date: 2025-03-10
 author: "Сергей Яшин"
 categories: [networking, wireshark, vpp, monitoring]
 tags: [vpp, wireshark, packet capture, network monitoring, open source]
-image: docs/images/wireshark_capture.png
+image: /images/wireshark_capture.png
 ---
 
 # 🔄 VPP to Wireshark Bridge
 
 <div style="text-align: center;">
-  <img src="docs/images/wireshark_capture.png" alt="Захват трафика VPP в Wireshark" style="max-width: 700px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="/images/wireshark_capture.png" alt="Захват трафика VPP в Wireshark" style="max-width: 700px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </div>
 
 ## Что это и зачем вам это нужно?
