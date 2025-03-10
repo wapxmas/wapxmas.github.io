@@ -2,7 +2,7 @@
 layout: post
 title: "VPP to Wireshark Bridge (in English)"
 subtitle: "Bridge Between Worlds: How to Analyze VPP Traffic in Real-time"
-date: 2025-03-10
+date: 2025-03-09
 author: "Sergey Yashin"
 categories: [networking, wireshark, vpp, monitoring]
 tags: [vpp, wireshark, packet capture, network monitoring, open source]
