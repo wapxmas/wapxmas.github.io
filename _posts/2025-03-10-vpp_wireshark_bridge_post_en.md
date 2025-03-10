@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "VPP to Wireshark Bridge"
+title: "VPP to Wireshark Bridge (in English)"
 subtitle: "Bridge Between Worlds: How to Analyze VPP Traffic in Real-time"
 date: 2025-03-10
 author: "Sergey Yashin"
